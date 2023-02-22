@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./../public/css/style.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Title -->
+    <title>Gaspard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <img src="./../public/assets/logo.png" alt="Logo">
+            </div>
+            <ul class="header__nav">
+                <li><a href="./../index.html">Accueil</a></li>
+                <li><a href="./collection.html">Collection</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div class="header__instagram">
+                <a href="https://www.instagram.com/angashoes/"><i class='bx bxl-instagram'></i></a>
+            </div>
+        </header>
+        <section class="shoe">
+            <div class="shoe__photos">
+                <div class="shoe__slider">
+                    <div class="slides">
+                        <div class="slide" id="slide-1">
+                            <img src="./../public/assets/chaussure.jpeg" alt="Photo des chaussures">
+                        </div>
+                        <div class="slide" id="slide-2">
+                            <img src="./../public/assets/chaussure.jpeg" alt="Photo des chaussures">
+                        </div>
+                        <div class="slide" id="slide-3">
+                            <img src="./../public/assets/chaussure.jpeg" alt="Photo des chaussures">
+                        </div>
+                        <div class="slide" id="slide-4">
+                            <img src="./../public/assets/chaussure.jpeg" alt="Photo des chaussures">
+                        </div>
+                        <div class="slide" id="slide-5">
+                            <img src="./../public/assets/chaussure.jpeg" alt="Photo des chaussures">
+                        </div>
+                    </div>
+                    <div class="slider__links" id="links">
+                        <a href="#slide-1" class="link active"></a>
+                        <a href="#slide-2" class="link"></a>
+                        <a href="#slide-3" class="link"></a>
+                        <a href="#slide-4" class="link"></a>
+                        <a href="#slide-5" class="link"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="shoe__description">
+                    <h2 class="shoe__name">Nike Air Force 1</h2>
+                    <span class="shoe__price">9.95€</span>
+                    <p class="shoe__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In sapiente veritatis reprehenderit perferendis beatae sed similique commodi quisquam saepe numquam.</p>
+                    <a href="./contact.html" class="btn">Nous contacter</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./../js/shoe.js"></script>
+</body>
+</html>

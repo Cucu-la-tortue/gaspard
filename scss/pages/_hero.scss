@@ -1,0 +1,124 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    height: 88vh;
+
+    &__blank {
+        width: 8vw;
+        border-right: .5px lightgrey solid;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: 84vw;
+    }
+
+    &__sneaker {
+        height: 75%;
+        padding: 6rem 0 0 4rem;
+        position: relative;
+
+        .sneaker__text {
+            max-width: 40%;
+            height: 100%;
+            position: relative;
+
+            .sneaker__collection {
+                font-size: 1.2rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                margin-bottom: 2rem;
+            }
+
+            .sneaker__model {
+                font-family: $gloock;
+                font-size: 4rem;
+                letter-spacing: .6rem;
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+            }
+
+            .sneaker__description {
+                font-weight: 400;
+                color: rgb(150, 150, 150);
+                font-size: 1rem;
+                letter-spacing: 1px;
+                line-height: 1.4rem;
+            }
+
+            .hero__btn {
+                position: absolute;
+                bottom: 4.5rem;
+            }
+            
+        }
+
+        img {
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            max-width: 50%;
+            height: auto;
+        }
+    }
+
+    &__carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: .5px lightgrey solid;
+        height: 25%;
+        width: 100%;
+        position: relative;
+
+        .carousel {
+            display: flex;
+            align-items: flex-end;
+            gap: 20%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            width: 60%;
+    
+            img {
+                max-width: calc(60% / 3);
+                object-fit: contain;
+                scroll-snap-align: center;
+            }
+        }
+        
+        i {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #323232;
+    
+            &:first-child {
+                left: 10%;
+            }
+    
+            &:last-child {
+                right: 10%;
+            }
+        }
+    }
+
+    &__details {
+        display: inline-flex;
+        width: 8vw;
+        border-left: .5px lightgrey solid;
+        writing-mode: vertical-rl;
+        align-items: center;
+        justify-content: center;
+        color: rgb(180, 180, 180);
+
+        span {
+            color: #202020;
+            font-weight: 600;
+        }
+        
+    }
+}

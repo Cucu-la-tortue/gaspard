@@ -1,0 +1,17 @@
+/* ---------------------------- FONTS ----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Lexend+Deca:wght@400;500;600&family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+
+$roboto: "Roboto", sans-serif;
+$lato: "Lato", sans-serif;
+$lexend: "Lexend Deca", sans-serif;
+$gloock: "Gloock", serif;
+
+
+
+
+
+/* ---------------------------- BREAKPOINTS ----------------------------*/
+$breakpoints: (
+    tablet: 900px,
+    mobile: 550px, 
+)

@@ -1,0 +1,474 @@
+@charset "UTF-8";
+/* ---------- Utils ---------- */
+/* ---------------------------- FONTS ----------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Lexend+Deca:wght@400;500;600&family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap");
+/* ---------------------------- BREAKPOINTS ----------------------------*/
+/* --------- Vendors --------- */
+/* ---------- Base ----------- */
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─
+/*─                                            RESET
+/*─
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  /*─ Debug font size on iphone when landscape orientation ─*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*─ Debug safari font weight when fixed element on the page ─*/
+  -webkit-font-smoothing: antialiased;
+  /*─ idem : Debug safari font weight when fixed element on the page ─*/
+}
+
+html, body, nav, header, footer, div, span,
+h1, h2, h3, p,
+a, img,
+ul, li,
+table, form, label, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type=submit]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+  /*─ IE11 → remove cross to close ─*/
+}
+
+textarea {
+  overflow: auto;
+  /*─ Hide scroll bar on IE ─*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video, svg, picture {
+  display: block;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #202020;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+
+.page_title {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* -------- Components ------- */
+.btn {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #202020;
+  padding: 1rem 3rem;
+  letter-spacing: 2px;
+  border-radius: 3rem;
+}
+.btn:hover {
+  background-color: #f1863b;
+}
+
+/* --------- Layouts --------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  border-bottom: 0.5px lightgrey solid;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  width: 8vw;
+  padding: 0 0.5rem;
+  border-right: 0.5px lightgrey solid;
+}
+.header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  width: auto;
+}
+.header__nav li {
+  position: relative;
+}
+.header__nav li a {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.header__nav li a:hover {
+  color: #f1863b;
+  transition: color 0.2s;
+}
+.header__nav li a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 2.5%;
+  width: 95%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #f1863b;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+.header__nav li a:hover::after {
+  transform: scale(1);
+}
+.header__instagram {
+  width: 8%;
+  border-left: 0.5px lightgrey solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__instagram i {
+  font-size: 2rem;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+.header__instagram i:hover {
+  color: #f1863b;
+  transition: color 0.2s;
+}
+
+/* ---------- Pages ---------- */
+.shoe {
+  display: flex;
+  height: 88vh;
+}
+.shoe__photos {
+  max-width: 40%;
+}
+.shoe__slider {
+  height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.shoe__slider .slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 95%;
+}
+.shoe__slider .slides .slide {
+  height: 100%;
+  margin: 0 3rem;
+  scroll-snap-align: center;
+}
+.shoe__slider .slides .slide:first-child {
+  margin-left: 6rem;
+}
+.shoe__slider .slides .slide:last-child {
+  margin-right: 6rem;
+}
+.shoe__slider .slides .slide img {
+  height: 100%;
+  width: auto;
+}
+.shoe__slider .slider__links {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+.shoe__slider .slider__links a {
+  width: 0.8rem;
+  height: 0.8rem;
+  background: rgb(166, 166, 166);
+  border-radius: 50%;
+  margin: 0 0.3rem;
+}
+.shoe__slider .slider__links a:hover {
+  background: rgb(110, 110, 110);
+}
+.shoe__slider .slider__links .active {
+  background: rgb(110, 110, 110);
+}
+.shoe .container {
+  height: 100%;
+  padding: 4rem 4rem;
+  background-color: #f2f2f2;
+}
+.shoe__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: #fff;
+  padding: 6rem 4rem;
+  height: 100%;
+}
+.shoe__name {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+.shoe__price {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.shoe__text {
+  text-align: center;
+  color: rgb(72, 72, 72);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  height: 88vh;
+}
+.hero__blank {
+  width: 8vw;
+  border-right: 0.5px lightgrey solid;
+}
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  width: 84vw;
+}
+.hero__sneaker {
+  height: 75%;
+  padding: 6rem 0 0 4rem;
+  position: relative;
+}
+.hero__sneaker .sneaker__text {
+  max-width: 40%;
+  height: 100%;
+  position: relative;
+}
+.hero__sneaker .sneaker__text .sneaker__collection {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+.hero__sneaker .sneaker__text .sneaker__model {
+  font-family: "Gloock", serif;
+  font-size: 4rem;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero__sneaker .sneaker__text .sneaker__description {
+  font-weight: 400;
+  color: rgb(150, 150, 150);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.4rem;
+}
+.hero__sneaker .sneaker__text .hero__btn {
+  position: absolute;
+  bottom: 4.5rem;
+}
+.hero__sneaker img {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  max-width: 50%;
+  height: auto;
+}
+.hero__carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px lightgrey solid;
+  height: 25%;
+  width: 100%;
+  position: relative;
+}
+.hero__carousel .carousel {
+  display: flex;
+  align-items: flex-end;
+  gap: 20%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 60%;
+}
+.hero__carousel .carousel img {
+  max-width: 20%;
+  object-fit: contain;
+  scroll-snap-align: center;
+}
+.hero__carousel i {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #323232;
+}
+.hero__carousel i:first-child {
+  left: 10%;
+}
+.hero__carousel i:last-child {
+  right: 10%;
+}
+.hero__details {
+  display: inline-flex;
+  width: 8vw;
+  border-left: 0.5px lightgrey solid;
+  writing-mode: vertical-rl;
+  align-items: center;
+  justify-content: center;
+  color: rgb(180, 180, 180);
+}
+.hero__details span {
+  color: #202020;
+  font-weight: 600;
+}
+
+.collection__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 10rem;
+  margin: 6rem 8rem;
+}
+.collection .sneaker__details {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+.collection .sneaker__info {
+  position: relative;
+}
+.collection .sneaker__info span {
+  text-align: right;
+  position: absolute;
+  right: 0;
+}
+.collection .sneaker__size {
+  color: rgb(153, 153, 153);
+  font-weight: 400;
+}
+
+.contact h1 {
+  margin-bottom: 3rem;
+}
+.contact__steps {
+  width: fit-content;
+  margin: auto;
+}
+.contact__steps li {
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  line-height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+.contact__steps li strong {
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s ease-in;
+}
+.contact__steps li strong:hover {
+  color: #f1863b;
+  transition: color 0.2s ease-in;
+}
+.contact__steps li i {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+.contact p {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+}
+.contact__payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+.contact__payment li {
+  max-width: 20%;
+}
+
+footer {
+  font-size: 0.9rem;
+  color: rgb(135, 135, 135);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------- Themes --------- */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,66 @@
+.contact {
+    //height: 88vh;
+    h1 {
+        margin-bottom: 3rem;
+    }
+    &__steps {
+        width: fit-content;
+        margin: auto;
+
+        li {
+            font-size: 1.2rem;
+            font-family: $lexend;
+            font-weight: normal;
+            line-height: 2.5rem;
+            display: flex;
+            align-items: center;
+
+            strong {
+                font-weight: bold;
+                text-decoration: underline;
+                transition: color .2s ease-in;
+
+                &:hover {
+                    color: #f1863b;
+                    transition: color .2s ease-in;
+                }
+            }
+            
+            i {
+                margin-right: 2rem;
+                font-size: 2rem;
+            }
+        }
+
+
+    }
+
+    p {
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        font-family: $lexend;
+        font-size: 1.5rem;
+    }
+
+    &__payment {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+
+        li {
+            max-width: 20%;
+        }
+    }
+}
+
+footer {
+    font-size: .9rem;
+    color: rgb(135, 135, 135);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}

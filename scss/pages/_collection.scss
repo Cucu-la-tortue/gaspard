@@ -1,0 +1,31 @@
+.collection {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6rem 10rem;
+        margin: 6rem 8rem;
+    }
+
+    .sneaker__details {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        font-family: $lexend;
+        
+    }
+
+    .sneaker__info {
+        position: relative;
+
+        span {
+            text-align: right;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .sneaker__size {
+        color: rgb(153, 153, 153);
+        font-weight: 400;
+    }
+}

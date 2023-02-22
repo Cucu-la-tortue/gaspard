@@ -1,0 +1,21 @@
+{
+  "name": "starter-project",
+  "version": "1.0.0",
+  "description": "Starter-project with scss, partials, and a base structure that I use to quickly build websites.",
+  "main": "index.html",
+  "scripts": {
+    "start": "sass --watch ./scss/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cucu-la-tortue/starter-project.git"
+  },
+  "author": "Cucu",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/Cucu-la-tortue/starter-project/issues"
+  },
+  "homepage": "https://github.com/Cucu-la-tortue/starter-project#readme"
+}
