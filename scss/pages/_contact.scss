@@ -78,8 +78,8 @@
             max-width: 20%;
 
             @include mobile-only {
-                max-width: 50%;
                 margin: auto;
+                max-width: 50%;
             }
         }
     }
