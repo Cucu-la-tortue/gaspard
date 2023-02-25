@@ -1,8 +1,16 @@
 .header {
     display: flex;
     justify-content: space-between;
-    height: 12vh;
+    height: 8vw;
     border-bottom: .5px lightgrey solid;
+
+    @include tablet-only {
+        height: 13vw;
+    }
+
+    @include mobile-only {
+        height: 20vw;
+    }
 
     &__logo {
         display: flex;
@@ -10,6 +18,14 @@
         width: 8vw;
         padding: 0 .5rem;
         border-right: .5px lightgrey solid;
+
+        @include tablet-only {
+            width: 13vw;
+        }
+
+        @include mobile-only {
+            width: 20vw;
+        }
     }
 
     &__nav {
@@ -57,19 +73,48 @@
                 }
             }
         }
+
+        @include mobile-only {
+            display: none;
+        }
+    }
+
+    &__name {
+        display: none;
+        height: fit-content;
+        margin: auto;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        font-size: 1.2rem;
+
+        @include mobile-only {
+            display: block;
+        }
     }
 
     &__instagram {
-        width: 8%;
+        width: 8vw;
         border-left: .5px lightgrey solid;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        @include tablet-only {
+            width: 13vw;
+        }
+
+        @include mobile-only {
+            width: 20vw;
+        }
+
         i {
             font-size: 2rem;
             font-weight: 300;
             transition: color .2s;
+
+            @include mobile-only {
+                font-size: 2.5rem;
+            }
 
             &:hover {
                 color: #f1863b;

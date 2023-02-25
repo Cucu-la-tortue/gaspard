@@ -4,6 +4,13 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 6rem 10rem;
         margin: 6rem 8rem;
+
+        @include mobile-only {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            margin: 3rem 4rem;
+        }
     }
 
     .sneaker__details {
@@ -11,7 +18,10 @@
         font-size: 1.1rem;
         line-height: 1.6rem;
         font-family: $lexend;
-        
+
+        @include mobile-only {
+            font-size: 1rem;
+        }
     }
 
     .sneaker__info {

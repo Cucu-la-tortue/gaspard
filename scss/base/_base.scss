@@ -11,4 +11,9 @@ body {
     text-transform: uppercase;
     text-align: center;
     margin-top: 4rem;
+
+    @include mobile-only {
+        font-size: 2rem;
+        margin-top: 0;
+    }
 }
