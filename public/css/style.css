@@ -150,6 +150,24 @@ body {
   background-color: #f1863b;
 }
 
+.btn--mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .btn--mobile {
+    display: inherit;
+  }
+}
+
+.btn--no-mobile {
+  display: inherit;
+}
+@media screen and (max-width: 600px) {
+  .btn--no-mobile {
+    display: none;
+  }
+}
+
 /* --------- Layouts --------- */
 .header {
   display: flex;

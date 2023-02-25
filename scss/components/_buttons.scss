@@ -11,3 +11,19 @@
         background-color: #f1863b;
     }
 }
+
+.btn--mobile {
+    display: none;
+
+    @include mobile-only {
+        display: inherit;
+    }
+}
+
+.btn--no-mobile {
+    display: inherit;
+
+    @include mobile-only {
+        display: none;
+    }
+}
