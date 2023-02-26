@@ -1,6 +1,6 @@
 .shoe {
     display: flex;
-    height: 88vh;
+    height: calc(100vh - 8vw);
 
     @include mobile-only {
         flex-direction: column;
@@ -55,7 +55,7 @@
         .slider__links {
             display: flex;
             justify-content: center;
-            margin-top: .8rem;
+            //margin-top: .8rem;
 
             a {
                 width: .8rem;
